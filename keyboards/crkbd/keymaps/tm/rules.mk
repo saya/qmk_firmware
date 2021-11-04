@@ -1,0 +1,9 @@
+RGBLIGHT_ENABLE = yes    # Enable WS2812 RGB underlight.
+VIA_ENABLE = yes         # Enable VIA
+OLED_ENABLE = yes
+OLED_DRIVER = SSD1306
+LTO_ENABLE = yes
+COMBO_ENABLE = yes
+MOUSEKEY_ENABLE = yes
+CONSOLE_ENABLE = no
+KEY_OVERRIDE_ENABLE = yes
