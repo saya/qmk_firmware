@@ -24,6 +24,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
+#define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 200
+#define IGNORE_MOD_TAP_INTERRUPT
+#define DISABLE_SPACE_CADET_ROLLOVER
+#define PREVENT_STUCK_MODIFIERS
+
 #ifdef RGBLIGHT_ENABLE
 #    undef RGBLED_NUM
 #    define RGBLIGHT_ANIMATIONS
