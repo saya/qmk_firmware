@@ -111,14 +111,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK_DH] = LAYOUT_split_3x6_3(
+                                                                                                    /*  ; : */
       KC_INS,    KC_Q,    KC_W,    KC_F,     KC_P,    KC_B,     KC_J,       KC_L,        KC_U,    KC_Y, KC_SCLN, _______,
+   /* -                                                                                                             _ */
       KC_MINS,  LALT_A,  LCTL_R,  LSFT_S,   RINTL_T,    KC_G,     KC_M,     LINTL_N,      RSFT_E,  RCTL_I,  LALT_O, KC_UNDS,
-      KC_LGUI,    KC_Z,    KC_X,    LGUI_C,   RSYM_D,    KC_V,     KC_K,     LNUM_H,     LGUI_COMM,  RSFT_DOT, KC_SLSH, _______,
+      KC_ENTER, KC_Z,    KC_X,    LGUI_C,   RSYM_D,    KC_V,     KC_K,     LNUM_H,     LGUI_COMM,  RSFT_DOT, KC_SLSH, _______,
                                   MOU_TAB, NAV_SPC, ALT_ESC,     FUN_ENT, SFT_BSP, KC_DEL
     ),
     [_L_NUM] = LAYOUT_split_3x6_3(
+            /*   @    ,                            %*/
       _______,   KC_AT,    KC_7,    KC_8,    KC_9, KC_PERC,  _______, _______, _______, _______, _______, _______,
+            /*  =                                  *                                             : */
       _______,  KC_EQL,    KC_4,    KC_5,    KC_6, KC_ASTR,  _______, _______, _______, _______, KC_COLN, _______,
+            /*  $                                  + */
       _______,  KC_DLR,    KC_1,    KC_2,    KC_3, KC_PLUS,  _______, _______, _______, _______, _______, _______,
                KC_0,  KC_SPC, _______,   _______, _______, _______
     ),
@@ -135,9 +140,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                _______, _______, _______, _______, _______, _______
     ),
     [_R_SYM] = LAYOUT_split_3x6_3(
+                                                            /* |    ,  ` ~   , {      , }      , ^ */
       _______, _______, _______, _______, _______, _______,  KC_PIPE,  KC_GRV, KC_LCBR, KC_RCBR, KC_CIRC, _______,
+                                                            /* &    , ' "    , (      , )      , ! */
       _______, _______, _______, _______, _______, _______,  KC_AMPR, KC_QUOT, KC_LPRN, KC_RPRN, KC_EXLM, _______,
+                                                            /* ~    , "      , [      , ],     , \ */
       _______, _______, _______, _______, _______, _______,  KC_TILD, KC_DQUO, KC_LBRC, KC_RBRC, KC_BSLS, _______,
+                                                            /* # */
                _______,  KC_SPC, _______,   _______, _______, KC_HASH
     ),
      [_R_INTL] = LAYOUT_split_3x6_3(
