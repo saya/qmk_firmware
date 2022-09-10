@@ -54,16 +54,6 @@
 // Nested taps send modifier even if below tapping term. This causes quite many misfires.
 // #define PERMISSIVE_HOLD
 
-// Mouse setup
-#undef MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED 4
-
-#undef MOUSEKEY_WHEEL_INTERVAL
-#define MOUSEKEY_WHEEL_INTERVAL 50
-
-#undef MOUSEKEY_WHEEL_MAX_SPEED
-#define MOUSEKEY_WHEEL_MAX_SPEED 4
-
 // Save some space
 #define NO_ACTION_ONESHOT // -576 bytes
 
