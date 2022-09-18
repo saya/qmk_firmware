@@ -1,7 +1,5 @@
-# OLED_ENABLE = yes
-# OLED_DRIVER = SSD1306   # Enables the use of OLED displays
-# ENCODER_ENABLE = yes       # Enables the use of one or more encoders
-# RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
+SRC += features/achordion.c
 
-MOUSEKEY_ENABLE = yes
-DYNAMIC_TAPPING_TERM_ENABLE = yes
+# Allow using the "qmk console" command.
+#CONSOLE_ENABLE=yes
+
