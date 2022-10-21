@@ -30,6 +30,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 200
 //#define TAPPING_TERM_PER_KEY // See get_tapping_term().
+#define COMBO_COUNT 1
+#define CAPS_WORD_IDLE_TIMEOUT 0
 
 // ...except some keys that are typically not rolled when typing should only send the tap action
 // if not interrupted/rolled.
@@ -40,16 +42,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_FORCE_HOLD
 
 #ifdef RGBLIGHT_ENABLE
-    #define RGBLIGHT_EFFECT_BREATHING
-    #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-    #define RGBLIGHT_EFFECT_SNAKE
-    #define RGBLIGHT_EFFECT_KNIGHT
-    #define RGBLIGHT_EFFECT_CHRISTMAS
+    #undef RGBLIGHT_EFFECT_BREATHING
+    #undef RGBLIGHT_EFFECT_RAINBOW_MOOD
+    #undef RGBLIGHT_EFFECT_RAINBOW_SWIRL
+    #undef RGBLIGHT_EFFECT_SNAKE
+    #undef RGBLIGHT_EFFECT_KNIGHT
+    #undef RGBLIGHT_EFFECT_CHRISTMAS
     #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-    #define RGBLIGHT_EFFECT_RGB_TEST
-    #define RGBLIGHT_EFFECT_ALTERNATING
-    #define RGBLIGHT_EFFECT_TWINKLE
+    #undef RGBLIGHT_EFFECT_RGB_TEST
+    #undef RGBLIGHT_EFFECT_ALTERNATING
+    #undef RGBLIGHT_EFFECT_TWINKLE
     #define RGBLIGHT_LIMIT_VAL 120
     #define RGBLIGHT_HUE_STEP 10
     #define RGBLIGHT_SAT_STEP 17

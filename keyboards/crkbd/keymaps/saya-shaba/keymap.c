@@ -97,12 +97,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                _______, _______, _______, _______, _______, _______
     ),
     [_R_NAV] = LAYOUT_split_3x6_3(
-      _______, _______, _______, _______, _______, _______, _______,  KC_HOME, _______,  KC_END, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______,  KC_HOME, _______, _______, _______, _______,
       _______, _______, _______, _______, _______, _______, _______,  KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, _______,
-      _______, _______, _______, _______, _______, _______,  _______, _______, KC_PGDN, KC_PGUP, _______, _______,
+      _______, _______, _______, _______, _______, _______,  _______, KC_END , KC_PGDN, KC_PGUP, _______, _______,
                _______, _______, _______,   _______, _______,  _______
     )
 };
+
+#ifdef COMBO_ENABLE
+const uint16_t PROGMEM caps_word_combo[] = {KC_W, KC_F, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(caps_word_combo, CAPS_WORD),
+};
+#endif
+
+#ifdef CAPS_WORD_ENABLE
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word, with shift applied.
+        case KC_A ... KC_Z:
+        case KC_MINS:
+            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            return true;
+
+        // Keycodes that continue Caps Word, without shifting.
+        case KC_1 ... KC_0:
+        case KC_BSPC:
+        case KC_DEL:
+        case KC_UNDS:
+            return true;
+        case KC_GRV:
+        default:
+            return false;  // Deactivate Caps Word.
+    }
+}
+#endif
 
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
