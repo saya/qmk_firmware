@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Force mod-tap decision based only on tapping term...
 #define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_TERM 200
+#define TAPPING_TERM 175
 //#define TAPPING_TERM_PER_KEY // See get_tapping_term().
 #define COMBO_COUNT 1
 #define CAPS_WORD_IDLE_TIMEOUT 0
