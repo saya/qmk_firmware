@@ -50,11 +50,13 @@ enum layers {
 #define SFT_BSPC RSFT_T(KC_BSPC)
 #define FUN_DEL LT(_L_FUN, KC_DEL)
 
+#define RSFT_INS RSFT(KC_INS)
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK_DH] = LAYOUT_split_3x6_3(
                                                                                                 /*  ; :       _   */
-        KC_INS,   KC_Q,   KC_W,   KC_F,    KC_P,   KC_B,       KC_J,     KC_L,      KC_U,     KC_Y, KC_SCLN,  KC_UNDS,
+      RSFT_INS,   KC_Q,   KC_W,   KC_F,    KC_P,   KC_B,       KC_J,     KC_L,      KC_U,     KC_Y, KC_SCLN,  KC_UNDS,
     /* -                                                                                                      ' " */
        KC_MINS, LALT_A, LCTL_R, LSFT_S, RINTL_T,   KC_G,       KC_M,  LINTL_N,    RSFT_E,   RCTL_I,  LALT_O,  KC_QUOT,
       KC_ENTER,   KC_Z, LSFT_X, LGUI_C,  RSYM_D,   KC_V,       KC_K,   LNUM_H, LGUI_COMM, RSFT_DOT, KC_SLSH, KC_ENTER,
@@ -70,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                KC_0, KC_SPC, _______,  _______, _______, _______
     ),
     [_L_FUN] = LAYOUT_split_3x6_3(
-       KC_INS,  KC_F12,   KC_F7,   KC_F8,   KC_F9, KC_PSCR,  _______, _______, _______, _______, _______, _______,
+     RSFT_INS,  KC_F12,   KC_F7,   KC_F8,   KC_F9, KC_PSCR,  _______, _______, _______, _______, _______, _______,
       KC_CAPS,  KC_F11,   KC_F4,   KC_F5,   KC_F6, KC_SCRL,  _______, _______, _______, _______, _______, _______,
       _______,  KC_F10,   KC_F1,   KC_F2,   KC_F3, KC_PAUS,  _______, _______, _______, _______, _______, _______,
                _______,  _______, _______, _______, _______, _______
