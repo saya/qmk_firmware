@@ -58,5 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_VAL_STEP 17
 #endif
 
-#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+#define OLED_FONT_H "keyboards/splitkb/aurora/corne/glcdfont.c"
+#define OLED_DISPLAY_128X32
+#define SPLIT_OLED_ENABLE
 #define NO_ACTION_ONESHOT // -576 bytes
