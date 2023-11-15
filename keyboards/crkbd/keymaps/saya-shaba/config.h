@@ -30,8 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 185
 //#define TAPPING_TERM_PER_KEY // See get_tapping_term().
-#define COMBO_COUNT 1
-#define CAPS_WORD_IDLE_TIMEOUT 0
 
 // ...except some keys that are typically not rolled when typing should only send the tap action
 // if not interrupted/rolled.
