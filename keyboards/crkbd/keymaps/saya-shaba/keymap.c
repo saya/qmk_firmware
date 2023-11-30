@@ -20,9 +20,7 @@ enum layers {
     _COLEMAK_DH = 0,
     _L_NUM,
     _L_FUN,
-    _L_INTL,
     _R_SYM,
-    _R_INTL,
     _R_NAV
 };
 
@@ -35,16 +33,16 @@ enum layers {
 #define LCTL_R LCTL_T(KC_R)
 #define LSFT_S LSFT_T(KC_S)
 #define RSYM_D LT(_R_SYM, KC_D)
-#define RINTL_T LT(_R_INTL, KC_T)
+#define RSYM_T LT(_R_SYM, KC_T)
 #define LSFT_X LSFT_T(KC_X)
 #define LGUI_C LGUI_T(KC_C)
 #define NAV_SPC LT(_R_NAV, KC_SPACE)
 
-#define LINTL_N LT(_L_INTL, KC_N)
 #define RSFT_E RSFT_T(KC_E)
 #define RCTL_I RCTL_T(KC_I)
 #define LALT_O LALT_T(KC_O)
 #define LNUM_H LT(_L_NUM, KC_H)
+#define LNUM_N LT(_L_NUM, KC_N)
 #define LGUI_COMM LGUI_T(KC_COMM)
 #define RSFT_DOT RSFT_T(KC_DOT)
 #define SFT_BSPC RSFT_T(KC_BSPC)
@@ -77,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                 /*  ; :       _   */
       RSFT_INS,   KC_Q,   KC_W,   KC_F,    KC_P,   KC_B,       KC_J,     KC_L,      KC_U,     KC_Y, KC_SCLN,  KC_UNDS,
     /* -                                                                                                      ' " */
-       KC_MINS, LALT_A, LCTL_R, LSFT_S, RINTL_T,   KC_G,       KC_M,  LINTL_N,    RSFT_E,   RCTL_I,  LALT_O,  KC_QUOT,
+       KC_MINS, LALT_A, LCTL_R, LSFT_S,  RSYM_T,   KC_G,       KC_M,   LNUM_N,    RSFT_E,   RCTL_I,  LALT_O,  KC_QUOT,
       KC_ENTER,   KC_Z, LSFT_X, LGUI_C,  RSYM_D,   KC_V,       KC_K,   LNUM_H, LGUI_COMM, RSFT_DOT, KC_SLSH, KC_ENTER,
                                 KC_ESC, NAV_SPC, KC_TAB,     KC_ENT, SFT_BSPC,   FUN_DEL
     ),
@@ -96,12 +94,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,  KC_F10,   KC_F1,   KC_F2,   KC_F3, KC_PAUS,  _______, _______, _______, _______, _______, _______,
                _______,  _______, _______, _______, _______, _______
     ),
-    [_L_INTL] = LAYOUT_split_3x6_3(
-      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-      _______,  GER_AE, _______,  GER_SS, _______, _______, _______, _______, _______, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-               _______, _______, _______, _______, _______, _______
-    ),
     [_R_SYM] = LAYOUT_split_3x6_3(
                                                           /* &      , |      , {      , }      , ^        */
       _______, _______, _______, _______, _______, _______,  KC_AMPR, KC_PIPE, KC_LCBR, KC_RCBR, KC_CIRC, _______,
@@ -110,12 +102,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                           /* ~      , !      , [      , ]      , \        */
       _______, _______, _______, _______, _______, _______,  KC_TILD, KC_EXLM, KC_LBRC, KC_RBRC, KC_BSLS, _______,
                _______,  KC_SPC, _______,   _______, _______, _______
-    ),
-     [_R_INTL] = LAYOUT_split_3x6_3(
-      _______, _______, _______, _______, _______, _______, _______, _______,  GER_UE, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, US_EURO, _______,  GER_OE, _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-               _______, _______, _______, _______, _______, _______
     ),
     [_R_NAV] = LAYOUT_split_3x6_3(
       _______, _______, _______, _______, _______, _______, _______,  KC_HOME, _______, _______, _______, _______,
