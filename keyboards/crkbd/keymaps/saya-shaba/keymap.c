@@ -52,6 +52,25 @@ enum layers {
 
 #define RSFT_INS RSFT(KC_INS)
 
+enum combos {
+  UE_UMLAUT,
+  OE_UMLAUT,
+  SS_UMLAUT,
+  AE_UMLAUT
+};
+
+const uint16_t PROGMEM ue_umlaut_combo[] = {KC_U, KC_Y, COMBO_END};
+const uint16_t PROGMEM oe_umlaut_combo[] = {LGUI_COMM, RSFT_DOT, COMBO_END};
+const uint16_t PROGMEM ss_umlaut_combo[] = {KC_W, KC_F, COMBO_END};
+const uint16_t PROGMEM ae_umlaut_combo[] = {LSFT_X, LGUI_C, COMBO_END};
+
+combo_t key_combos[] = {
+  [UE_UMLAUT] = COMBO(ue_umlaut_combo, GER_UE),
+  [OE_UMLAUT] = COMBO(oe_umlaut_combo, GER_OE),
+  [SS_UMLAUT] = COMBO(ss_umlaut_combo, GER_SS),
+  [AE_UMLAUT] = COMBO(ae_umlaut_combo, GER_AE)
+};
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK_DH] = LAYOUT_split_3x6_3(
