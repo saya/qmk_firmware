@@ -26,8 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MASTER_LEFT
 
-// Force mod-tap decision based only on tapping term...
-#define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 185
 //#define TAPPING_TERM_PER_KEY // See get_tapping_term().
 
